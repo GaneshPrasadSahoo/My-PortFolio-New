@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Tumor Classification Project</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #05060f;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    header a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    main section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #05060f;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    section ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    section ul li {
+      margin-bottom: 5px;
+    }
+
+    a.github-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #05060f;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a.github-link:hover {
+      background: #D8ECF8;
+      color: #05060f;
+    }
+
+    strong {
+      font-weight: bold;
+      color: #05060f;
+    }
+
+    /* Project images grid */
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .project-images figure {
+      max-width: 300px;
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-images figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-images img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .project-images figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Interpretable Deep Learning for Multiclass Brain Tumor Classification Using MRI and LIME</h1>
+    <a href="index.html">← Back to Projects</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>This project focuses on accurately classifying brain MRI images into four categories: Glioma, Pituitary, Meningioma, and No Tumor. It leverages deep learning, specifically a custom CNN model (along with VGG16 and VGG19), to achieve high-performance classification.</p>
+      <p>To enhance transparency and trust in AI predictions, Explainable AI (XAI) techniques using LIME are integrated, highlighting key regions in the MRI images that influenced the model's decision.</p>
+      <p>A Streamlit-based user interface allows users to easily upload MRI scans and obtain both the classification result and a visual explanation, making the system intuitive and practical for real-world applications.</p>
+      <p><strong>Key Highlights:</strong></p>
+      <ul>
+        <li>Custom CNN for accurate tumor classification</li>
+        <li>VGG16 and VGG19 for comparative analysis</li>
+        <li>LIME-based heatmaps for interpretability</li>
+        <li>Interactive Streamlit UI for user-friendly predictions</li>
+        <li><strong>Published as a research paper in Springer</strong></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots / Images</h2>
+
+      <div class="project-images">
+        <figure>
+          <img src="images/BrainTumor.jpg" alt="Brain Tumor Screenshot 1">
+          <figcaption>Website</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/proj1Model.png" alt="Brain Tumor Screenshot 2">
+          <figcaption>Proposed Model</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Lime.jpg" alt="Brain Tumor Screenshot 3">
+          <figcaption>Affected Region Detected by LIME</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Present.jpg" alt="Brain Tumor Screenshot 4">
+          <figcaption>Presented the research paper at NIT Rourkela</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Certificate.jpg" alt="Brain Tumor Screenshot 5">
+          <figcaption>Certificate Distributed</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/cert.jpg" alt="Brain Tumor Screenshot 6">
+          <figcaption>Certificate</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>GitHub Link</h2>
+      <p><a href="https://github.com/GaneshPrasadSahoo/Brain-Tumor-Classification-using-CNN-XAI" target="_blank" class="github-link">View on GitHub</a></p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span id="close">&times;</span>
+    <img src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = document.getElementById('close');
+
+    document.querySelectorAll('.project-images img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    console.log("Project 1 page loaded successfully.");
+  </script>
+
+</body>
+</html>

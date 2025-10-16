@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW Sales Dashboard</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #05060f;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    header a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    main section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #05060f;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    section ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    section ul li {
+      margin-bottom: 5px;
+    }
+
+    a.github-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #05060f;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a.github-link:hover {
+      background: #D8ECF8;
+      color: #05060f;
+    }
+
+    strong {
+      font-weight: bold;
+      color: #05060f;
+    }
+
+    /* Project images grid */
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .project-images figure {
+      max-width: 300px;
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-images figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-images img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .project-images figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BMW Sales Dashboard</h1>
+    <a href="index.html">← Back to Projects</a>
+  </header>
+
+  <main>
+<section>
+  <h2>📊 Executive Summary – BMW Sales Dashboard</h2>
+  <p>
+    The <strong>BMW Sales Dashboard</strong> is a <strong>Power BI analytics project</strong> designed to provide a 
+    <strong>360° overview of BMW’s global sales performance</strong>. It transforms complex data into 
+    <em>interactive, visual insights</em>, helping stakeholders make informed, data-driven decisions with ease.
+  </p>
+
+  <h3>✨ Key Highlights</h3>
+  <ul>
+    <li><strong>Total Sales:</strong> 253K</li>
+    <li><strong>Total Revenue:</strong> 💰 $19 Billion</li>
+    <li><strong>Average Price per Unit:</strong> 💵 $75K</li>
+    <li><strong>Top Model:</strong> 🏆 BMW 7 Series</li>
+  </ul>
+  <p>
+    The dashboard visualizes <strong>sales trends (2010–2024)</strong>, <strong>fuel-type preferences</strong>, 
+    and <strong>regional performance</strong>, making it a complete tool for performance tracking and strategic planning.
+  </p>
+
+  <h3>🧩 Advanced Features</h3>
+  <ul>
+    <li>🌍 <strong>Global Sales Overview:</strong> Real-time insights on sales, revenue, and profitability.</li>
+    <li>🚘 <strong>Model Intelligence Pages:</strong> Deep analytics for each BMW model with yearly KPIs and revenue trends.</li>
+    <li>🧭 <strong>Seamless Navigation:</strong> Interactive Power BI navigation, slicers, and bookmarks for smooth exploration.</li>
+  </ul>
+
+  <h3>💡 Business Insights</h3>
+  <ul>
+    <li><strong>BMW 7 Series</strong> leads in revenue generation.</li>
+    <li><strong>Hybrid & Electric models</strong> show strong growth, reflecting BMW’s sustainability efforts.</li>
+    <li><strong>Europe & Asia</strong> are the top-performing regions globally.</li>
+    <li>Noticeable <strong>sales rebound post-2022</strong>, followed by steady growth through 2024.</li>
+  </ul>
+
+  <h3>🧠 Technical Stack</h3>
+  <ul>
+    <li><strong>Tool:</strong> Microsoft Power BI</li>
+    <li><strong>Data Modeling:</strong> Power Query & DAX</li>
+    <li><strong>Visualizations:</strong> Bar, Donut, Line, and Map charts</li>
+    <li><strong>Design Theme:</strong> Interactive dark mode UI</li>
+  </ul>
+</section>
+
+
+    <section>
+      <h2>Screenshots / Images</h2>
+
+      <div class="project-images">
+        <figure>
+          <img src="images/BMW.png" alt="Brain Tumor Screenshot 1">
+          <figcaption>Dashboard</figcaption>
+        </figure>
+
+<style>
+  figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  figure video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  figcaption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #333;
+  }
+
+  /* Fullscreen popup background */
+  .video-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Fullscreen video styling */
+  .video-popup video {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+  }
+
+  /* Close button */
+  .close-popup {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .close-popup:hover {
+    color: red;
+  }
+</style>
+
+<!-- Normal video preview -->
+<figure id="videoThumbnail">
+  <video muted loop autoplay>
+    <source src="images/Dashboard Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Full Dashboard Video</figcaption>
+</figure>
+
+<!-- Popup video player -->
+<div class="video-popup" id="videoPopup">
+  <span class="close-popup" id="closePopup">&times;</span>
+  <video controls autoplay>
+    <source src="images/Dashboard Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<script>
+  const videoThumbnail = document.getElementById('videoThumbnail');
+  const videoPopup = document.getElementById('videoPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  // Open popup when clicked
+  videoThumbnail.addEventListener('click', () => {
+    videoPopup.style.display = 'flex';
+  });
+
+  // Close popup
+  closePopup.addEventListener('click', () => {
+    videoPopup.style.display = 'none';
+    const popupVideo = videoPopup.querySelector('video');
+    popupVideo.pause(); // stop video when closed
+  });
+</script>
+
+
+      </div>
+    </section>
+
+    <section>
+      <h2>GitHub Link</h2>
+      <p><a href="https://github.com/GaneshPrasadSahoo/BMW-Sales-Dashboard-Power-BI-Analytics-Project" target="_blank" class="github-link">View on GitHub</a></p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span id="close">&times;</span>
+    <img src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = document.getElementById('close');
+
+    document.querySelectorAll('.project-images img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    console.log("Project 1 page loaded successfully.");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Metrics Prediction using Machine Learning
+</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #05060f;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    header a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    main section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #05060f;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    section ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    section ul li {
+      margin-bottom: 5px;
+    }
+
+    a.github-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #05060f;
+      color: #D8ECF8;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a.github-link:hover {
+      background: #D8ECF8;
+      color: #05060f;
+    }
+
+    strong {
+      font-weight: bold;
+      color: #05060f;
+    }
+
+    /* Project images grid */
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .project-images figure {
+      max-width: 300px;
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-images figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-images img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .project-images figcaption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Health Metrics Prediction using Machine Learning</h1>
+    <a href="index.html">← Back to Projects</a>
+  </header>
+
+  <main>
+<section>
+  <h2>Project Overview</h2>
+  <p><strong>Health Metrics Prediction</strong> is a machine learning project designed to estimate key health indicators such as <strong>Blood Pressure (Systolic/Diastolic)</strong>, <strong>Stress Level</strong>, and <strong>Heart Rate</strong> based on user inputs like <strong>Gender</strong>, <strong>Age</strong>, <strong>Sleep Duration</strong>, <strong>Physical Activity Level</strong>, <strong>Daily Steps</strong>, and <strong>BMI Category</strong>.</p>
+
+  <p>Built with <strong>Streamlit</strong>, this interactive web application allows users to input their details and instantly receive predictions for their vital health metrics.</p>
+
+  <p><strong>🔹 Models Used:</strong></p>
+  <ul>
+    <li><strong>RandomForestRegressor</strong> – Best performance with R² = 0.9835, MSE = 0.495</li>
+    <li><strong>DecisionTreeRegressor</strong> – Good accuracy with R² = 0.9519</li>
+    <li><strong>K-Nearest Neighbors (KNN)</strong> – Training accuracy 100%, Testing accuracy 81.43%</li>
+  </ul>
+
+  <p><strong>🔹 Key Features:</strong></p>
+  <ul>
+    <li>Predicts Blood Pressure, Stress Level, and Heart Rate</li>
+    <li>Displays health status (e.g., Hypertension Stage 1, Moderate Stress)</li>
+    <li>Simple and user-friendly Streamlit interface</li>
+  </ul>
+
+  <p><strong>🔹 Technologies Used:</strong> Python, Pandas, NumPy, Scikit-learn, Streamlit</p>
+
+  <p><strong>Conclusion:</strong> This project demonstrates how <strong>machine learning</strong> can assist in health monitoring by predicting vital health parameters with high accuracy. The <strong>RandomForestRegressor</strong> model achieved the best performance, making this tool a reliable choice for quick health assessments.</p>
+</section>
+
+
+    <section>
+      <h2>Screenshots / Images</h2>
+
+      <div class="project-images">
+        <figure>
+          <img src="images/proj_3 img.png" alt="Brain Tumor Screenshot 1">
+          <figcaption>Website With Classification</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>GitHub Link</h2>
+      <p><a href="https://github.com/GaneshPrasadSahoo/Health-Metrics-Prediction-using-machine-learning" target="_blank" class="github-link">View on GitHub</a></p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span id="close">&times;</span>
+    <img src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = document.getElementById('close');
+
+    document.querySelectorAll('.project-images img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    console.log("Project 1 page loaded successfully.");
+  </script>
+
+</body>
+</html>
